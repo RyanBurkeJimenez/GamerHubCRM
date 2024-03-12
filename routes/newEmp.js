@@ -1,26 +1,27 @@
 const express = require('express')
 const router = express.Router()
 
-const users = []
+const emp = []
 
 router.get('/', (req,res) =>{
-    res.render('login')
+    res.render('newEmp')
 })
 
 
 router.post('/', async (req, res) =>{
     try{
-        users.push({
+        emp.push({
+            fname: req.body.fname,
+            lname: req.body.lname,
             id: req.body.id,
             password: req.body.password
         })
         res.render('success') /*successful login will redirect to next page */
-        console.log('Logged in successfully')
     }
     catch{
-        res.redirect('/IThelp')
+        res.redirect('IThelp')
     }
-    console.log(users)
+    console.log(emp)
 })
 
 module.exports = router;

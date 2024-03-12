@@ -41,6 +41,7 @@ console.log(err)})
 const indexRouter = require('./routes/index')
 const loginRouter = require('./routes/login')
 const helpRouter = require('./routes/IThelp')
+const newEmpRouter = require('./routes/newEmp')
 
 
 /* Setting up default routes for the API */
@@ -48,6 +49,9 @@ const helpRouter = require('./routes/IThelp')
 app.use('/', indexRouter)
 app.use('/login', loginRouter)
 app.use('/help', helpRouter)
+app.use('/newEmp', newEmpRouter)
+
+
 
 const port = process.env.PORT;
 const server = app.listen(port, () => {
