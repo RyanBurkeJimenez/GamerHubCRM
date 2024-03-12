@@ -3,13 +3,18 @@ const bodyParser = require('body-parser')
 const express = require('express')
 const path = require('path')
 const mongoose = require ('mongoose')
-const dotenv = require('dotenv')
+const expressLayouts = require('express-ejs-layouts')
 
+const dotenv = require('dotenv')
 dotenv.config({path:'./config.env'})
 const app = express()
 
 /*Set view engine to EJS to allow */
 app.set('view engine', 'ejs')
+
+/*Set Layouts for EJS readability and template usage */
+app.set('layout', 'layouts/layout')
+app.use(expressLayouts)
 
 /*Body Parser enabled to read URL when passing arguments */
 app.use(express.urlencoded({ extended: false }))
