@@ -14,11 +14,11 @@ router.post('/', async (req, res) =>{
             id: req.body.id,
             password: req.body.password
         })
-        res.render('DataManagement') /*successful login will redirect to next page */
+        res.redirect('/CDM') /*successful login will redirect to next page */
         console.log('Logged in successfully')
     }
     catch{
-        res.redirect('/IThelp')
+        res.redirect('/help')
     }
     console.log(users)
 })
