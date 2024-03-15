@@ -14,7 +14,7 @@ router.post('/', async (req, res) =>{
             id: req.body.id,
             password: req.body.password
         })
-        res.render('success') /*successful login will redirect to next page */
+        res.render('DataManagement') /*successful login will redirect to next page */
         console.log('Logged in successfully')
     }
     catch{

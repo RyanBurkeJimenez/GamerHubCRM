@@ -127,3 +127,10 @@ p{
     bottom: 1px;
 
 }
+
+.hang-left{
+    padding: 0px;
+    margin: 0px;
+    border: 1px solid black;
+
+}

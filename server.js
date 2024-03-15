@@ -1,9 +1,9 @@
 /* Create and initialize express for server talk*/
-const bodyParser = require('body-parser')
 const express = require('express')
 const path = require('path')
 const mongoose = require ('mongoose')
 const expressLayouts = require('express-ejs-layouts')
+const bodyParser = require('body-parser')
 
 const dotenv = require('dotenv')
 dotenv.config({path:'./config.env'})
@@ -24,7 +24,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/views'));
-
+app.use(bodyParser.urlencoded({limit: '10mb', extended: false}))
 /*Connect to GamerHub MongoDB Cluster */
 
 console.log(process.env.DATABASE_URL)
@@ -42,7 +42,7 @@ const indexRouter = require('./routes/index')
 const loginRouter = require('./routes/login')
 const helpRouter = require('./routes/IThelp')
 const newEmpRouter = require('./routes/newEmp')
-
+const DataRouter = require('./routes/DataManagement')
 
 /* Setting up default routes for the API */
 
@@ -50,7 +50,7 @@ app.use('/', indexRouter)
 app.use('/login', loginRouter)
 app.use('/help', helpRouter)
 app.use('/newEmp', newEmpRouter)
-
+app.use('/CDM', DataRouter)
 
 
 const port = process.env.PORT;
