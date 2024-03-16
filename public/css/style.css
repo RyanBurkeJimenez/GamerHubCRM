@@ -37,6 +37,12 @@ h2 {
     text-align: center;
 }
 
+h3{
+    text-align: center;
+    padding-top: 20px;
+    margin: 20px;
+
+}
 /* Navigation styles */
 nav {
     margin: 40px;
@@ -56,13 +62,14 @@ nav a {
     max-width: 100%;
     height:auto;
     width: auto\9;
-     
+
 }
 
 nav a:hover {
     background-color: #443c3c80;
     color: white;
 }
+
 
 footer{
     text-align: center;
@@ -79,7 +86,7 @@ form{
     margin-right: auto;
     text-align:left;
     font-size: 18px;
-   
+
 }
 
 input{
@@ -94,7 +101,7 @@ button{
 
 button:hover{
     background-color: #443c3c80;
-    color: white;  
+    color: white;
     transition-duration: .3s;
 }
 
@@ -133,3 +140,105 @@ p{
     border: 1px solid black;
 
 }
+
+/*Flexbox manipulation for UI design*/
+
+.flexbox-container{
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    /* gap: 5rem; */
+
+}
+
+.flexbox-item{
+    width: 200px;
+    margin: 10px;
+    border: 2px solid black;
+    background: grey;
+    border-radius: 25px;
+}
+
+/* Children and Material for Customer Data Management Functionality */
+.createuser{
+    min-height: 100px;
+    text-align: center;
+    justify-content: center;
+
+}
+ .createuser:hover{
+    background-color: #443c3c80;
+    color: white;
+    transition-duration: .3s;
+    cursor:pointer;
+}
+
+.createuser a{
+  
+    text-decoration: none;
+    font-size: 20px;
+    display:inline-flex;
+    text-align: center;
+    color: black;
+}
+
+.createuser a:hover{
+    color:white;
+    transition-duration: .3s;
+}
+
+.createuser p{
+    font-size: 10px;
+    font-style: italic;
+}
+
+.edituser {
+    min-height: 100px;
+    text-align: center;
+    justify-content: center;
+}
+.edituser:hover{
+    background-color: #443c3c80;
+    color: white;
+    transition-duration: .3s;
+    cursor:pointer;
+}
+
+.edituser a{
+  
+    text-decoration: none;
+    font-size: 20px;
+    display:inline-flex;
+    text-align: center;
+    color: black;
+}
+.edituser a:hover{
+    color:white;
+    transition-duration: .3s;
+}
+
+.edituser p{
+    font-size: 10px;
+    font-style: italic;
+}
+
+.new-cust{
+    min-height: 100px;
+    text-align: center;
+    justify-content: center;
+}
+
+.freq-cust{
+    min-height: 400px;
+    min-width: 400px;
+    text-align: center;
+    justify-content: center;
+}
+
+.freq-cust h1{
+    font-size: 20px;
+}
+
+/* Customer Data Management Section -- End  */
