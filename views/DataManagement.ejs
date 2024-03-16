@@ -4,11 +4,11 @@
     <div class="flexbox-cdm">
     <div class="flexbox-buttons">
         <div class="flexbox-item createuser">
-          <a href="/CDM/addCustomer">Create User</a>
+          <a href="/CDM/Customer/Add">Create User</a>
           <p>Enter in new customer information</p>
         </div>
         <div class="flexbox-item edituser">
-            <a href="#">Edit User Data</a>
+            <a href="/CDM/Customer/Update">Edit User Data</a>
             <p>Edit existing customer information</p>
         </div>
         <div class="flexbox-item new-cust">
@@ -27,24 +27,23 @@
             <table class ="cust-table">
                 <thead>
                     <tr>
-                        <th>First Name</th>
-                        <th>Last Name</th>
+                        <th>Name</th>
                         <th>Email</th>
                     </tr>
                 </thead>
             <tbody>
                 <%customers.forEach(customer => {%>
                     <tr>
-                        <td><%=customer.firstname%></td>
-                        <td><%=customer.lastname%></td>
+                        <td><%=customer.firstname%>  <%=customer.lastname%></td>
                         <td><%=customer.email%></td>
+                        <td><a href="#">options...</a></td>
                     </tr>
                 <% });%>
             </tbody>
             </table>
         </div>
     </div>
+    <button><a href ="../"> Home</a></button>  
 </body>
 
 
-<a href ="../"> Home</a>

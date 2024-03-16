@@ -1,0 +1,28 @@
+<h1>Customer Information Center</h1>
+<hr>
+
+<div class="all-cust">
+    <h1>All Customers</h1>
+    <table class ="cust-table">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+    <tbody>
+        <%customers.forEach(customer => {%>
+            <tr>
+                <td><%=customer.firstname%></td>
+                <td><%=customer.lastname%></td>
+                <td><%=customer.email%></td>
+                <td><a href ="edit">Update</a></td>
+                <td><a href ="delete">Delete</a></td>
+            </tr>
+        <% });%>
+    </tbody>
+    </table>
+   
+</div>
+<button class="center"><a href="/CDM">Go Back</a></button>

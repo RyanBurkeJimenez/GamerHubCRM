@@ -17,6 +17,10 @@ const customerSchema = new mongoose.Schema({
     confirmation:{
         type: Boolean,
         default: false
+    },
+    createdAt:{
+        type: Date, 
+        default: Date.now
     }
 }, {collection: "Customers"})
 
