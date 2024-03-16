@@ -4,10 +4,13 @@ const path = require('path')
 const mongoose = require ('mongoose')
 const expressLayouts = require('express-ejs-layouts')
 const bodyParser = require('body-parser')
-
 const dotenv = require('dotenv')
 dotenv.config({path:'./config.env'})
 const app = express()
+
+// Import Schemas into the server file
+const Employee = require('./models/employee')
+
 
 /*Set view engine to EJS to allow */
 app.set('view engine', 'ejs')
