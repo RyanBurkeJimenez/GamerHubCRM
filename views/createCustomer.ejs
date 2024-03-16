@@ -1,0 +1,27 @@
+<h1>Create New Customer</h1>
+<div class="flexbox-container1">
+    <h2>Please enter in new customer's information: </h2>
+    <div class = "form">
+    <form action="/CDM/addCustomer" method="POST">
+        <div>
+            <label for="fname">First Name: </label>
+            <input type="text" name="fname" required>
+        <br>
+        <label for="lname">Last Name: </label>
+            <input type="text" name="lname" required>
+        <br>
+            <label for="email">Email: </label>
+            <input type="email" name="email" required>
+       <br>
+            <input type="checkbox" name="confirm">
+            <label for="confirm">Send Email Confirmation?  </label>
+            
+        <br>
+
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <button><a href="/CDM">Cancel</a></button>
+</div>
+
+</div>

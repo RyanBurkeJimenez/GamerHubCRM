@@ -13,12 +13,13 @@ router.post('/', async (req, res) =>{
     try{
         //Hash the password before sending to database
         const hashedPassword = await bcrypt.hash(req.body.password, 10)
-        console.log(hashedPassword)
+        const isAdmin = req.body.isAdmin === 'on';
         const newEmployee = new Employee({
             firstname: req.body.fname,
             lastname: req.body.lname,
             id: req.body.id,
-            password: hashedPassword
+            password: hashedPassword,
+            isAdmin: isAdmin
         })
        await newEmployee.save() //send and save the new employee to the database
         res.render('success') /*successful login will redirect to next page */

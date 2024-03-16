@@ -44,13 +44,13 @@ h3{
 
 }
 /* Navigation styles */
-nav {
+.homenav {
     margin: 40px;
     padding: 30px;
     text-align: center;
 }
 
-nav a {
+.homenav a {
     padding: 25px;
     margin: 10px;
     color: #000000;
@@ -105,14 +105,6 @@ button:hover{
     transition-duration: .3s;
 }
 
-/*Create some space with padding and margins*/
-
-.space{
- text-align: center;
-padding: 20px;
-margin: 20px;
-}
-
 textarea{
     height: 250px;
     width: 350px;
@@ -125,15 +117,6 @@ p{
     font-size: 16px;
 }
 
-.checkbox{
-    display: inline-block;
-    font-size: 16px;
-    vertical-align: middle;
-    position:relative;
-    bottom: 1px;
-
-}
-
 .hang-left{
     padding: 0px;
     margin: 0px;
@@ -143,29 +126,42 @@ p{
 
 /*Flexbox manipulation for UI design*/
 
-.flexbox-container{
+.flexbox-cdm{
+
+   display: flex;
+   border: solid 1px black;
+}
+
+.flexbox-buttons{
+    display: flex;
+    flex-direction: column;
+    border: 1px  solid black;
+
+    /* justify-content: flex-start;
+    align-items: left; */
+}
+
+.flexbox-container1{
 
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    flex-direction: row;
-    /* gap: 5rem; */
+    flex-direction: column;
+     gap: 5rem;
 
 }
 
-.flexbox-item{
-    width: 200px;
-    margin: 10px;
-    border: 2px solid black;
-    background: grey;
-    border-radius: 25px;
-}
 
 /* Children and Material for Customer Data Management Functionality */
 .createuser{
+    min-width: 100px;
     min-height: 100px;
     text-align: center;
     justify-content: center;
+    margin: 10px;
+    border: 2px solid black;
+    background: #e0ebeb;
+    border-radius: 25px;
 
 }
  .createuser:hover{
@@ -198,6 +194,10 @@ p{
     min-height: 100px;
     text-align: center;
     justify-content: center;
+    margin: 10px;
+    border: 2px solid black;
+    background: #e0ebeb;
+    border-radius: 25px;
 }
 .edituser:hover{
     background-color: #443c3c80;
@@ -228,17 +228,34 @@ p{
     min-height: 100px;
     text-align: center;
     justify-content: center;
+    margin: 10px;
+    border: 2px solid black;
+    background: #e0ebeb;
+    border-radius: 25px;
 }
 
-.freq-cust{
-    min-height: 400px;
-    min-width: 400px;
+.all-cust{
+    min-height: 375px;
+    min-width: 800px;
     text-align: center;
     justify-content: center;
+    margin: 10px;
+    border: 2px solid black;
+    background: #e0ebeb;
+    border-radius: 25px;
 }
 
-.freq-cust h1{
+.all-cust h1{
     font-size: 20px;
+}
+
+.cust-table table, th, td{
+    width: 50%;
+}
+
+.cust-table td{
+    padding: 5px;
+    border: .5px solid black;
 }
 
 /* Customer Data Management Section -- End  */

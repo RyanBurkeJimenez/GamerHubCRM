@@ -1,10 +1,11 @@
 const express = require('express')
+const mongoose = require('mongoose')
 const router = express.Router()
 const employee = require('../models/employee')
 const bcrypt = require('bcrypt')
 
 router.get('/', (req,res) =>{
-    res.render('login')
+    res.render('loginAdmin')
 })
 
 
@@ -16,8 +17,12 @@ router.post('/', async (req, res) =>{
     }
 
      if(await bcrypt.compare(req.body.password, emp.password)){
-        res.redirect('/CDM') /*successful login will redirect to next page */
-        console.log('Logged in successfully')
+        if(emp.isAdmin === true){
+        res.redirect('/newEmp') /*successful login will redirect to next page */
+        console.log('Logged in successfully')}
+        else {
+            res.send('No Administrative Privileges')
+         }
      }else {
         res.send('Not the correct credentials')
      }
@@ -28,4 +33,5 @@ router.post('/', async (req, res) =>{
         res.redirect('fail')
     }
 })
+
 module.exports = router;

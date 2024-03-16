@@ -17,6 +17,10 @@ const employeeSchema = new mongoose.Schema({
     password:{
         type:String,
         required: true
+    },
+    isAdmin:{
+        type: Boolean,
+        default: false //Defaulted to false since not every employee is admin
     }
  }, {collection: 'Employees'});
 

@@ -46,6 +46,8 @@ const loginRouter = require('./routes/login')
 const helpRouter = require('./routes/IThelp')
 const newEmpRouter = require('./routes/newEmp')
 const DataRouter = require('./routes/DataManagement')
+const adminRouter = require('./routes/loginAdmin')
+const custRouter = require('./routes/customerRoutes')
 
 /* Setting up default routes for the API */
 
@@ -54,7 +56,8 @@ app.use('/login', loginRouter)
 app.use('/help', helpRouter)
 app.use('/newEmp', newEmpRouter)
 app.use('/CDM', DataRouter)
-
+app.use('/login/admin', adminRouter)
+app.use('/CDM/addCustomer', custRouter)
 
 const port = process.env.PORT;
 const server = app.listen(port, () => {

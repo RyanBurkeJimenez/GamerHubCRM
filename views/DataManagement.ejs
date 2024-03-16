@@ -1,11 +1,10 @@
 <header> <h3>Customer Data Management</h3></header>
 <hr>
 <body>
-    
-    <div class="flexbox-container">
-    <!-- <nav> -->
+    <div class="flexbox-cdm">
+    <div class="flexbox-buttons">
         <div class="flexbox-item createuser">
-          <a href="#">Create User</a>
+          <a href="/CDM/addCustomer">Create User</a>
           <p>Enter in new customer information</p>
         </div>
         <div class="flexbox-item edituser">
@@ -14,11 +13,37 @@
         </div>
         <div class="flexbox-item new-cust">
             <p> Newest Customer</p>
+            <% if (newestCustomer) { %>
+                <p><%= newestCustomer.firstname %> <%= newestCustomer.lastname %> || <%= newestCustomer.email %></p>
+            <% } else { %>
+                <p>No customers found</p>
+            <% } %>
         </div>
-        <div class="flexbox-item freq-cust"><h1>Frequent Customers</h1></div>
-    <!-- </nav> -->
     </div>
-    
+
+
+        <div class="all-cust">
+            <h1>All Customers</h1>
+            <table class ="cust-table">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+            <tbody>
+                <%customers.forEach(customer => {%>
+                    <tr>
+                        <td><%=customer.firstname%></td>
+                        <td><%=customer.lastname%></td>
+                        <td><%=customer.email%></td>
+                    </tr>
+                <% });%>
+            </tbody>
+            </table>
+        </div>
+    </div>
 </body>
 
 
