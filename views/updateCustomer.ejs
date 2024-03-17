@@ -17,8 +17,8 @@
                 <td><%=customer.firstname%></td>
                 <td><%=customer.lastname%></td>
                 <td><%=customer.email%></td>
-                <td><a href ="edit">Update</a></td>
-                <td><a href ="delete">Delete</a></td>
+                <td><a href ="/CDM/Customer/Update/edit/<%= customer._id%>">Update</a></td>
+                <td><a href ="/CDM/Customer/Update/delete/<%= customer._id%>">Delete</a></td>
             </tr>
         <% });%>
     </tbody>

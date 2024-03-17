@@ -124,6 +124,19 @@ p{
 
 }
 
+/* Universal Flex Containers */
+
+.centerbutton{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centerbutton a{
+    padding: 20px;
+    margin: 15px;
+    
+}
 /*Flexbox manipulation for UI design*/
 
 .flexbox-cdm{
@@ -141,17 +154,6 @@ p{
     /* justify-content: flex-start;
     align-items: left; */
 }
-
-.flexbox-container1{
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-     gap: 5rem;
-
-}
-
 
 /* Children and Material for Customer Data Management Functionality */
 .createuser{
@@ -262,3 +264,27 @@ p{
 }
 
 /* Customer Data Management Section -- End  */
+
+/*==========================================*/
+
+/*IThelp Section -- Begin*/
+
+.flexbox-container1{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+     gap: 5rem;
+
+}
+
+.itcheckboxes div{
+    display: inline-block;
+    margin-right:20px;
+}
+
+.itcheckboxes input[type="checkbox"] {
+    vertical-align: middle;
+    margin-right: 5px;
+}

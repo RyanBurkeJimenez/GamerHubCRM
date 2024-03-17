@@ -49,17 +49,29 @@ const DataRouter = require('./routes/DataManagement')
 const adminRouter = require('./routes/loginAdmin')
 const custRouter = require('./routes/customerRoutes')
 const updateRouter = require('./routes/updateCustomer')
+const loginIntRouter = require('./routes/loginInteraction')
+const interactionRouter = require('./routes/InteractionHub')
+const loginRARouter = require('./routes/loginRA')
+const RandARouter = require('./routes/RandA')
+const loginInventoryRouter = require('./routes/loginInventory')
+const InventoryRouter = require('./routes/inventoryHub')
 
 /* Setting up default routes for the API */
 
 app.use('/', indexRouter)
 app.use('/login', loginRouter)
+app.use('/login/admin', adminRouter)
+app.use('/login/CIH',loginIntRouter)
+app.use('/login/RandA', loginRARouter)
+app.use('/login/Inventory', loginInventoryRouter)
 app.use('/help', helpRouter)
 app.use('/newEmp', newEmpRouter)
 app.use('/CDM', DataRouter)
-app.use('/login/admin', adminRouter)
 app.use('/CDM/Customer/Add', custRouter)
 app.use('/CDM/Customer/Update', updateRouter)
+app.use('/CIH', interactionRouter)
+app.use('/RandA', RandARouter)
+app.use('/Inventory', InventoryRouter)
 
 const port = process.env.PORT;
 const server = app.listen(port, () => {

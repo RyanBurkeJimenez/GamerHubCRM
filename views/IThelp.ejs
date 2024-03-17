@@ -4,29 +4,36 @@
    
     <div class="form">
         <p>Please enter in your information and details of the issue below:</p>
-    <form action="/users/signup" method="POST">
+    <form action="/help" method="POST">
         <div>
+            <label for="id">ID:</label>
+            <input type="text" name="id" required>
             <label for="name">Name:</label>
-            <input type="text" name="name" id="name" required>
-            <label for="email">Email:</label>
-            <input type="email" name="email" id="email" required>
+            <input type="text" name="name" required>
+            <br>
+            <div>
+                <div class="itcheckboxes">
+            <input type="checkbox" id="loginissue" name="loginissue">
+            <label for="loginissue">Login Issue</label>
+            </div>
+            <div>
+            <input type="checkbox" id="compissue" name="compissue">
+            <label for="compissue">Hardware Issue</label>
+            </div>
+            <div>
+            <input type="checkbox" id="otherissue" name="otherissue">
+            <label for="otherissue">Other Issue</label>
+             </div>
+            </div>
+
 
             <p>What technical issue are you experiencing?</p>
-            <div class="checkbox">
-            <input type="checkbox" id="signon" name="signon" value="signon">
-            <label for="signon">Login Issues</label><br>
-            <input type="checkbox" id="signon1" name="signon" value="signon">
-            <label for="signon">Login Issues</label><br>
-            <input type="checkbox" id="signon2" name="signon" value="signon">
-            <label for="signon">Login Issues</label><br>
-            </div>
-        </div> 
-        <div class="space">
             <p>Please provide more details in the text area provided: </p>
-        <textarea></textarea>
-     </div>
+        <textarea id="content" name="content"></textarea><br>
+     
 
      
      <button type="submit">Submit</button>
     </form>
     <a href ="../"> Home</a>
+</div>
