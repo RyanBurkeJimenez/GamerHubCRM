@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 
 router.get('/', (req,res)=>{
-    res.render('InventoryHub')
+    res.render('CIH/interactionHub')
 })
 
 module.exports = router;

@@ -1,9 +1,9 @@
 const express = require('express')
 const router = express.Router()
-const Ticket = require('../models/helpRequests')
+const Ticket = require('../../models/helpRequests')
 
 router.get('/', (req,res) => {
-    res.render('IThelp')
+    res.render('ITHelp/IThelp')
 })
 
 router.post('/', async (req,res) =>{

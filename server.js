@@ -28,7 +28,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/views'));
 app.use(bodyParser.urlencoded({limit: '10mb', extended: false}))
-/*Connect to GamerHub MongoDB Cluster */
+
+/*Connect to GamerHub MongoDB Database */
 
 console.log(process.env.DATABASE_URL)
 const DB = process.env.DATABASE_URL.replace(
@@ -40,38 +41,71 @@ mongoose.connect(DB)
 .then (() => {console.log('Connection to GamerHub Database successful')})
 .catch(err => {console.log('Unsuccessful connection to database, try again.')
 console.log(err)})
+
+
+
 /*Location for all Router Calls on Server.js */
+/*Home Routers*/
 const indexRouter = require('./routes/index')
-const loginRouter = require('./routes/login')
-const helpRouter = require('./routes/IThelp')
-const newEmpRouter = require('./routes/newEmp')
-const DataRouter = require('./routes/DataManagement')
-const adminRouter = require('./routes/loginAdmin')
-const custRouter = require('./routes/customerRoutes')
-const updateRouter = require('./routes/updateCustomer')
-const loginIntRouter = require('./routes/loginInteraction')
-const interactionRouter = require('./routes/InteractionHub')
-const loginRARouter = require('./routes/loginRA')
-const RandARouter = require('./routes/RandA')
-const loginInventoryRouter = require('./routes/loginInventory')
-const InventoryRouter = require('./routes/inventoryHub')
+
+/*Customer Data Management Routers */
+const loginRouter = require('./routes/CDM/login')
+const custRouter = require('./routes/CDM/customerRoutes')
+const updateRouter = require('./routes/CDM/updateCustomer')
+const DataRouter = require('./routes/CDM/DataManagement')
+
+/*Customer Interaction Hub Routers */
+const loginIntRouter = require('./routes/CIH/loginInteraction')
+const interactionRouter = require('./routes/CIH/InteractionHub')
+
+/*Reporting and Analytics Routers */
+const loginRARouter = require('./routes/RandA/loginRA')
+const RandARouter = require('./routes/RandA/RandA')
+
+/*Inveotry Management Routers */
+const loginInventoryRouter = require('./routes/Inventory/loginInventory')
+const InventoryRouter = require('./routes/Inventory/inventoryHub')
+
+/*Administrative Routers */
+const newEmpRouter = require('./routes/Admin/newEmp')
+const adminRouter = require('./routes/Admin/loginAdmin')
+
+
+/*IT Help Routers */
+const helpRouter = require('./routes/ITHelp/IThelp')
+
 
 /* Setting up default routes for the API */
 
+/*Home Route */
 app.use('/', indexRouter)
+
+/*CDM Routes */
 app.use('/login', loginRouter)
-app.use('/login/admin', adminRouter)
-app.use('/login/CIH',loginIntRouter)
-app.use('/login/RandA', loginRARouter)
-app.use('/login/Inventory', loginInventoryRouter)
-app.use('/help', helpRouter)
-app.use('/newEmp', newEmpRouter)
 app.use('/CDM', DataRouter)
 app.use('/CDM/Customer/Add', custRouter)
 app.use('/CDM/Customer/Update', updateRouter)
+
+
+/*Customer Interaction Hub Routes */
+app.use('/login/CIH',loginIntRouter)
 app.use('/CIH', interactionRouter)
+
+/*Reporting and Analytics Routes */
+app.use('/login/RandA', loginRARouter)
 app.use('/RandA', RandARouter)
+
+/*Inventory Management Routes */
+app.use('/login/Inventory', loginInventoryRouter)
 app.use('/Inventory', InventoryRouter)
+
+/*Administrative Routes */
+app.use('/help', helpRouter)
+app.use('/newEmp', newEmpRouter)
+
+app.use('/login/admin', adminRouter)
+
+
 
 const port = process.env.PORT;
 const server = app.listen(port, () => {

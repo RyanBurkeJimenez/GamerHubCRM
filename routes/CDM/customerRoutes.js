@@ -1,11 +1,11 @@
 const express = require('express')
-const Customer = require('../models/customer')
+const Customer = require('../../models/customer')
 const mongoose = require('mongoose')
 
 const router = express.Router()
 
 router.get('/', (req,res) => {
-    res.render('createCustomer')
+    res.render('CDM/createCustomer')
 })
 
 router.post('/',async (req,res) =>{

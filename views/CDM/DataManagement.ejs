@@ -1,4 +1,26 @@
-<header> <h3>Customer Data Management</h3></header>
+<header> <h3>Customer Data Management</h3>
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("Dropdown").classList.toggle("show");
+        }
+        
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+        </script>
+    </header>
 <hr>
 <body>
     <div class="flexbox-cdm">
@@ -36,10 +58,15 @@
                     <tr>
                         <td><%=customer.firstname%>  <%=customer.lastname%></td>
                         <td><%=customer.email%></td>
-                        <td><a href="#">options...</a></td>
+                        <td><div class ="dropdown"><button onclick="myFunction()" class="dropbtn">options...</button>
+                        <div id="Dropdown" class ="dropdown-content">
+                        <a href="/CDM/Customer/Update/edit/<%=customer.id%>">Update</a>
+                        <a href="/CDM/Customer/Update/delete/<%=customer.id%>">Delete</a>
+                        </div></div></td>
                     </tr>
                 <% });%>
             </tbody>
+       
             </table>
         </div>
     </div>

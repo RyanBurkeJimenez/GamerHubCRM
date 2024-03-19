@@ -1,11 +1,11 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const bcrypt = require('bcrypt')
-const Employee = require('../models/employee')
+const Employee = require('../../models/employee')
 const router = express.Router()
 
 router.get('/', (req,res) =>{
-    res.render('newEmp')
+    res.render('Admin/newEmp')
 })
 
 
@@ -26,7 +26,6 @@ router.post('/', async (req, res) =>{
     }
     catch(error){
         console.error('Error creating employee', error);
-        res.render('fail')
     }
 })
 
