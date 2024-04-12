@@ -8,10 +8,6 @@ const dotenv = require('dotenv')
 dotenv.config({path:'./config.env'})
 const app = express()
 
-// Import Schemas into the server file
-const Employee = require('./models/employee')
-
-
 /*Set view engine to EJS to allow */
 app.set('view engine', 'ejs')
 
@@ -23,10 +19,11 @@ app.use(expressLayouts)
 app.use(express.urlencoded({ extended: false }))
 
 /*Set up static files for server to use while running API*/
-app.set('views', path.join(__dirname, 'views'));
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(__dirname + '/public'));
-app.use(express.static(__dirname + '/views'));
+app.set('views', path.join(__dirname, 'views'))
+app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(__dirname + '/public'))
+app.use(express.static(__dirname + '/views'))
+app.use('/static', express.static('node_modules'))
 app.use(bodyParser.urlencoded({limit: '10mb', extended: false}))
 
 /*Connect to GamerHub MongoDB Database */
@@ -65,6 +62,8 @@ const RandARouter = require('./routes/RandA/RandA')
 /*Inveotry Management Routers */
 const loginInventoryRouter = require('./routes/Inventory/loginInventory')
 const InventoryRouter = require('./routes/Inventory/inventoryHub')
+const addInventoryRouter = require('./routes/Inventory/addInventory')
+const tbdSupplierRouter = require('./routes/Inventory/tbdSupplier')
 
 /*Administrative Routers */
 const newEmpRouter = require('./routes/Admin/newEmp')
@@ -98,6 +97,8 @@ app.use('/RandA', RandARouter)
 /*Inventory Management Routes */
 app.use('/login/Inventory', loginInventoryRouter)
 app.use('/Inventory', InventoryRouter)
+app.use('/Inventory/Add', addInventoryRouter)
+app.use('/Inventory/TBD', tbdSupplierRouter)
 
 /*Administrative Routes */
 app.use('/help', helpRouter)

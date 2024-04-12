@@ -1,5 +1,46 @@
 <h1>Inventory Management Hub</h1>
-<h2>Currently under construction, Thank you for your patience!</h2>
+<hr>
+<div class="container">
+    <div class = "inv box-1"><h1>Inventory Overview</h1><hr>
+        <table class ="inv-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>ID</th>
+                </tr>
+            </thead>
+        <tbody>
+            <%inv.forEach(inventory => {%>
+                <tr>
+                    <td><%=inventory.name%></td>
+                    <td><%=inventory.category%></td>
+                    <td><%=inventory.price%></td>
+                    <td><%=inventory.quantity%></td>
+                    <td><%=inventory.id%></td>
+                    </div>
+                </div>
+
+                </tr>
+            <% });%>
+        </tbody>
+   
+        </table>
+    
+    </div>
+    <div class = "inv box-2"> <h1>Newest Product</h1> 
+        <hr>
+        <% if (newInv) { %>
+        <p><%= newInv.name %> <br> <%= newInv.quantity %> in stock</p>
+    <% } else { %>
+        <p>No customers found</p>
+    <% } %></div>
+    <div class = "inv box-3"> <a href="/Inventory/Add"><button>Update Inventory</button></a></div>
+    <div class = "inv box-4"> <a href="/Inventory/TBD"><button>Contact Supplier</button></a></div>
+</div>
+
 
 <div class="centerbutton">
     <button><a stlye="text-decoration:none" href="../">Home</a></button>

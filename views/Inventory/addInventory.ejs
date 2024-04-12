@@ -1,0 +1,31 @@
+<h1>Add New Inventory</h1>
+<div class="flexbox-container1">
+    <h2>Please enter in item information: </h2>
+    <div class = "form">
+    <form action="/Inventory/Add" method="POST">
+        <div>
+            <label for="name">Item Name: </label>
+            <input type="text" name="name" required>
+        <br>
+        <label for="category">Category: </label>
+            <input type="text" name="category" required>
+        <br>
+            <label for="price">Price: </label>
+            <input type="number" min= "1" step="any" name="price" required>
+       <br>
+            <label for="quantity">Quantity: </label>
+            <input type="number" name="quantity" required>
+       <br>
+            <label for="id">ID: </label>
+            <input type="number" name="id" required>
+        <br>
+  
+       
+
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <button><a href="/Inventory">Cancel</a></button>
+</div>
+
+</div>

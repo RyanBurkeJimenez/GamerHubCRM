@@ -5,12 +5,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
 }
 
 /* Body styles */
-body {
-    font-family: 'Raleway', sans-serif;
-    background-color: #ffffff;
+body { 
+    background-color: black;
 }
 
 /* Standard Centering Text*/
@@ -45,8 +45,8 @@ h3{
 }
 /* Navigation styles */
 .homenav {
-    margin: 40px;
-    padding: 30px;
+    margin: 30px;
+    padding: 10px;
     text-align: center;
 }
 
@@ -59,7 +59,6 @@ h3{
     border: 2px solid black;
     transition-duration: 0.3s;
     cursor: pointer;
-    max-width: 100%;
     height:auto;
     width: auto\9;
 
@@ -70,6 +69,14 @@ nav a:hover {
     color: white;
 }
 
+.homeflex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+     gap: 1rem;
+     flex-wrap:wrap-reverse;
+}
 
 footer{
     text-align: center;
@@ -258,34 +265,6 @@ p{
 
 .cust-table td{
    padding: 5px 5px 7px;
-    
-   
-}
-
-/* Customer Data Management Section -- End  */
-
-/*==========================================*/
-
-/*IThelp Section -- Begin*/
-
-.flexbox-container1{
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-     gap: 5rem;
-
-}
-
-.itcheckboxes div{
-    display: inline-block;
-    margin-right:20px;
-}
-
-.itcheckboxes input[type="checkbox"] {
-    vertical-align: middle;
-    margin-right: 5px;
 }
 
 .dropbtn {
@@ -327,3 +306,132 @@ p{
 }
   
   .show {display: block;}
+
+/* Customer Data Management Section -- End  */
+
+/*==========================================*/
+
+
+/*Customer Interaction Section -- Begins*/
+
+
+/*Customer Interaction Section -- Ends*/
+
+/*==========================================*/
+
+/*Reporting and Analytics Section -- Begins*/
+
+
+/*Reporting and Analytics Section -- Ends*/
+
+
+/*==========================================*/
+
+/*Inventory Management Section -- Begins*/
+.container{
+    width: 600px;
+    height: 400px;
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2em;
+}
+
+.inv{
+    
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+    
+    
+}
+
+.box-1{
+    flex: 3;
+    height: 400px;
+    align-self: center;
+    border: 2px solid black;
+    background-color: #e0ebeb;
+}
+
+.box-1 h1{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.box-2{
+    
+    height: 200px;
+    align-self: center;
+    border: 2px solid black;
+    background-color: #e0ebeb;
+}
+
+.box-2 h1{
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+}
+.box-3{
+    align-self: flex-end;
+}
+
+.box-3 button{
+    border-radius: 5px;
+}
+
+.box-4{
+    align-self: flex-end;
+}
+
+.box-4 button{
+   border-radius: 5px;
+}
+
+.inv-table{
+    width: 100% ;
+    border-collapse: collapse;
+}
+
+.inv-table td{
+    width: 10px;
+    padding: 10px;
+    border: 1px solid black;
+}
+/*Inventory Management Section -- Ends*/
+
+/*==========================================*/
+/*Administrative Section -- Begins*/
+
+
+
+/*Administrative Section -- Ends*/
+
+/*==========================================*/
+
+/*IThelp Section -- Begins*/
+
+.flexbox-container1{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+     gap: 5rem;
+
+}
+
+.itcheckboxes div{
+    display: inline-block;
+    margin-right:20px;
+}
+
+.itcheckboxes input[type="checkbox"] {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/*ITHelp Section -- Ends*/
+
+/*==========================================*/
