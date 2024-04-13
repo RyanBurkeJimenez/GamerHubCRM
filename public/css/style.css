@@ -320,6 +320,100 @@ p{
 /*==========================================*/
 
 /*Reporting and Analytics Section -- Begins*/
+.rep-box-top-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    
+}
+
+.rep-box-bott-container{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: space-evenly;
+    align-items: center;
+
+    gap: 1em;
+    
+}
+.rep{
+    width: 250px;
+    height: 120px;
+    border: 1px solid black;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.rep h2{
+    font-size: 18px;
+    font-style: normal;
+    border: 1px solid black;
+    border-style: none none solid none;
+}
+.ana{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.top-box1{
+background-color: #2b2828b6;
+color: white;
+}
+
+.top-box1 h2{
+    border: 1px solid white;
+    border-style: none none solid none;
+}
+
+.repp1{
+padding:0px;
+margin:0px;
+font-size: 23px;
+text-align: center;
+}
+
+.repp2{
+font-size: 15px;
+opacity: 60%;
+}
+
+.bot-box1{
+height: 300px;
+width: 40%;
+align-self: flex-start;
+}
+
+.bot-box1 h2{
+    font-size:20px;
+    text-align: left;
+    font-weight:600;
+    padding: 0px;
+    margin: 0px;
+}
+
+.bot-box2{
+width: 300px;
+height: 300px;
+}
+
+.bot-box2 h2{
+padding: 0px;
+margin: 0px;
+font-size:20px;
+font-style: normal;
+border: 1px solid black;
+border-style: none none solid none;
+}
+
+.repgraph{
+    width: 600px;
+    height: 250px;
+}
 
 
 /*Reporting and Analytics Section -- Ends*/

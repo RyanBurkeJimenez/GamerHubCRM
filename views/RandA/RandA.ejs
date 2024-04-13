@@ -1,6 +1,52 @@
-<h1>Reporting and Analytics Hub</h1>
-<h2>Currently under construction, Thank you for your patience!</h2>
 
+<br>
+<h1>Reporting and Analytics</h1>
+
+<hr><br>
+
+<div class ="rep-box-top-container">
+<div class ="rep top-box1"><h2>Total Sales (YTD)</h2>
+<p class="repp1">3,240</p>
+<p class="repp2">+50</p>
+</div>
+<div class ="rep top-box2"><h2>Total Income</h2>
+    <p class="repp1">$124,200</p>
+    <p class="repp2">+5,000</p></div>
+<div class ="rep top-box3"><h2>Customer Total</h2>
+    <p class="repp1">1,200</p>
+    <p class="repp2">+20</p></div>
+<div class ="rep top-box4"><h2>Retention Rate</h2>
+    <p class="repp1">9.8%</p>
+    <p class="repp2">+1.22%</p></div>
+</div>
+<br><br>
+<div class="rep-box-bott-container">
+<div class="ana bot-box1"> <h2>Sales Performance</h2>
+<img class ="repgraph" src="/css/images/graph.jpg" alt="">
+<button><a stlye="text-decoration:none" href="/css/images/graph.jpg" download="graph_data">Print Data</a></button>
+</div>
+<div class="ana bot-box2"> <h2>Recent Customers</h2>
+    <table class ="cust-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+    <tbody>
+        <%customers.forEach(customer => {%>
+            <tr>
+                <td><%=customer.firstname%>  <%=customer.lastname%></td>
+                <td><%=customer.email%></td>
+                </div></div></td>
+            </tr>
+        <% });%>
+    </tbody>
+
+    </table>
+</div>
+</div>
+<br><br>
 <div class="centerbutton">
     <button><a stlye="text-decoration:none" href="../">Home</a></button>
 </div>
