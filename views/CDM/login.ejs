@@ -2,7 +2,7 @@
 
     <h2>Please enter in employee ID and password below: </h2>
     <div class = "form">
-    <form action="/login" method="POST">
+    <form action="/login" autocomplete="off" method="POST">
         <div>
             <label for="id">Employee ID: </label>
             <input type="text" name="id" required>
@@ -10,6 +10,7 @@
             <label for="password">Password:  </label>
             <input type="password" name="password" required>
         </div>
+        <br>
         <div class="centerbutton">
             <button type="submit">Login</button>
         </div>

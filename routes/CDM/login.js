@@ -3,6 +3,7 @@ const router = express.Router()
 const employee = require('../../models/employee')
 const bcrypt = require('bcrypt')
 
+
 router.get('/', (req,res) =>{
     res.render('CDM/login')
 })
@@ -16,6 +17,7 @@ router.post('/', async (req, res) =>{
     }
 
      if(await bcrypt.compare(req.body.password, emp.password)){
+       const user = {name: emp}
         res.redirect('/CDM') /*successful login will redirect to next page */
         console.log('Logged in successfully')
      }else {

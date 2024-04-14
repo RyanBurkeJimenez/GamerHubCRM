@@ -54,6 +54,7 @@ const DataRouter = require('./routes/CDM/DataManagement')
 /*Customer Interaction Hub Routers */
 const loginIntRouter = require('./routes/CIH/loginInteraction')
 const interactionRouter = require('./routes/CIH/InteractionHub')
+const interaction2Router = require('./routes/CIH/InteractionHub2')
 
 /*Reporting and Analytics Routers */
 const loginRARouter = require('./routes/RandA/loginRA')
@@ -89,6 +90,7 @@ app.use('/CDM/Customer/Update', updateRouter)
 /*Customer Interaction Hub Routes */
 app.use('/login/CIH',loginIntRouter)
 app.use('/CIH', interactionRouter)
+app.use('/CIH/pg2', interaction2Router)
 
 /*Reporting and Analytics Routes */
 app.use('/login/RandA', loginRARouter)

@@ -2,7 +2,7 @@
 <div class="flexbox-container1">
     <h2>Please enter in item information: </h2>
     <div class = "form">
-    <form action="/Inventory/Add" method="POST">
+    <form action="/Inventory/Add" autocomplete="off" method="POST">
         <div>
             <label for="name">Item Name: </label>
             <input type="text" name="name" required>
@@ -23,9 +23,10 @@
        
 
         </div>
+        <br><br>
         <button type="submit">Submit</button>
     </form>
-    <button><a href="/Inventory">Cancel</a></button>
+    <button><a style="text-decoration: none; font-size: 16px; color: black;" href="/Inventory">Cancel</a></button>
 </div>
 
 </div>

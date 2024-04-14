@@ -1,6 +1,40 @@
-<h1>Customer Interaction Hub</h1>
-<h2>Currently under construction, Thank you for your patience!</h2>
+<br>
 
+<script>
+function displayText() {
+    var text = document.getElementById("contactInfo");
+    text.style.display = "block";
+}
+</script>
+<h1>Customer Interaction Hub</h1>
+<hr>
+<div class="cihcontainer-1">
+   
+<div class="cihchild page1-left">
+    <h2 class="cihcontactheader">Contact List</h2>
+    <%customers.forEach(customer => {%>
+   <button class="cihcontactbuttons" onclick="displayText()"> <%=customer.firstname%>  <%=customer.lastname%> <br><%=customer.email%>    <i class="fa-solid fa-circle-info"></i></button>
+    <% });%>
+
+</div>
+<div id = "contactInfo" class="cihchild page1-right">
+    <h2 class="cih-profile-header">Sergio Jimenez</h2>
+    <p class="p-contact-form">last contacted: October 8th, 2023</p>
+    <i class="fa-solid fa-user cih-contact-info-img"></i>
+    <br><br><br>
+    <p class="contact-lines">Email: Sjimenez@hotmail.com</p>
+    <p class="contact-lines">Phone: 111-111-1111</p>
+    <p class="contact-lines">Preferred Contact: Email</p>
+    <p class="contact-lines">Lifetime: 1 Year 5 Months</p>
+    <p class="contact-lines">Offers Available: Yes</p>
+    <p class ="contact-lines">Last Visit 21 October, 2023 12:42 PM</p>
+</div>
+<div class="cih-next-page"><a href="/CIH/pg2"><i class="fa-solid fa-circle-chevron-right cih-right-arrow"></i></a>
+    <p style="font-style: italic; font-size: 15px;">next page</p></div>
+</div>
+
+
+<br>
 <div class="centerbutton">
     <button><a stlye="text-decoration:none" href="../">Home</a></button>
 </div>
