@@ -217,17 +217,18 @@ p{
 
 .new-cust{
     min-height: 100px;
+    width: 490px;
     text-align: center;
     justify-content: center;
     margin: 10px;
     border: 2px solid black;
     background: #e0ebeb;
-    border-radius: 25px;
+    border-radius: none;
 }
 
 .all-cust{
     min-height: 375px;
-    min-width: 800px;
+    min-width: 500px;
     text-align: center;
     justify-content: center;
     margin: 10px;
@@ -236,12 +237,41 @@ p{
     border-radius: 25px;
 }
 
+.update-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.update-cust{
+    min-height: 375px;
+    width: 800px;
+    text-align: center;
+    justify-content: center;
+    border: 2px solid black;
+    background: #e0ebeb;
+    border-radius: 25px;
+}
+
+.update-cust-table table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+   }
+
+.update-cust-table th, td{
+ padding: 10px;
+}
+
+
+
 .all-cust h1{
     font-size: 20px;
+
 }
 
 .cust-table table, th, td{
     width: 50%;
+  
 }
 
 .cust-table td{
@@ -436,7 +466,7 @@ gap: 3em;
     text-align: center;
 }
 .cih-textarea{
-    font-size:12px;
+    font-size:16px;
     height:150px;
 
 }
